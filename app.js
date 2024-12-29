@@ -1,7 +1,7 @@
 const express =require("express");
 const app = express();
-const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
+//const mongoose = require("mongoose");
+//const Schema = mongoose.Schema;
 const path = require("path");
 const ejsMate = require("ejs-mate");
 const WarpAsync =require("./ultis/warpasync");
@@ -24,7 +24,7 @@ app.get("/",WarpAsync((req,res,next)=>{
 }))
 
 // setting up mongoose
-async function main() {
+/*async function main() {
     await mongoose.connect("mongodb://127.0.0.1:27017/clinic");
 }
 
@@ -34,7 +34,7 @@ main()
 }).catch((err)=>{
     console.log(err);
 })
-
+*/
 
 // error handling for page not found
 app.all("*",(req,res,next)=>{

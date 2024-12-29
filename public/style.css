@@ -1,3 +1,77 @@
 body{
     background-color: aqua;
 }
+/* Navbar Styles */
+.navbar {
+    width: 100%;
+    height: 80px; /* Fixed height */
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Left Side Links */
+.left-side {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.left-side i{
+    font-size:25px;
+}
+.left-side p a {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s;
+    margin-left:10px;
+}
+
+.left-side p a:hover {
+    color: #0396ff;
+}
+
+/* Right Side Buttons */
+.right-side {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.right-side a {
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 15px;
+    color: black;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.consult {
+    background-color: #0396ff;
+    color: white;
+    border: 2px solid transparent;
+}
+
+.consult:hover {
+    background-color: white;
+    color: #0396ff;
+    border: 2px solid #0396ff;
+}
+
+.signUp {
+    background-color: transparent;
+    border: 2px solid #0396ff;
+    color: #0396ff;
+}
+
+.signUp:hover {
+    background-color: #0396ff;
+    color: white;
+}
+.login:hover{
+    color: rgb(112, 111, 111);
+}
