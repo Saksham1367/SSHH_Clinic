@@ -125,6 +125,129 @@
     95% { transform: translateX(-300%); }
     100% { transform: translateX(0); }
   }
+  .our-doctor{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+   
+}
+.q-bar{
+    height:400px;
+    width:942px;
+    background-image: url("/SSHH_Clinic/views/photos/modern-soft-green-watercolor-texture-background-design_1055-17987.avif");
+    background-size: cover;
+    
+}
+.img{
+    margin-top:20px;
+    margin-left:30px;
+    height:120px;
+    width:100px;
+    border:1px solid black;
+    border-radius:3px;
+}
+.information{
+    margin-top:30px;
+    margin-left:40px;
+}
+.information h7{
+    font-weight: bold;
+}
+.book{
+    border:1px solid transparent;
+    padding:10px;
+    background-color: rgb(245, 35, 35);
+    margin-right:30px;
+    margin-bottom:20px;
+}
+.book a{
+    text-decoration: none;
+    color:white;
+    font-weight: bolder;
+    
+}
+.above{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.down{
+    width:90%;
+    height:97px;
+    background-color: white;
+    margin-left:45px;
+    margin-top:30px;
+    border-radius:20px;
+    text-align: center;
+    padding:5px;
+}
+
+/* From Uiverse.io by SivarajRathinam */ 
+.accordion {
+    width: 800px;
+    margin: 0 auto;
+    display:flex;
+    margin-top : 20px;
+    
+  }
+  
+  .accordion-item {
+    margin-bottom: 5px;
+  }
+  
+  .accordion-item .content {
+    font-size: 12px;
+  }
+  
+  .accordion input[type="radio"] {
+    display: none;
+  }
+  
+  .accordion .content {
+    height: 0px;
+    padding: 0px;
+    background-color: #fafafa;
+    border-top:1px solid #d5d4d4;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  .accordion input[type="radio"]:checked + .accordion-header + .content {
+    height: auto;
+    padding: 15px;
+    
+  }
+  .accordion-icon {
+    display: flex;
+    align-items: center;
+    transition: all 0.5s ease;
+  }
+  .accordion input[type="radio"]:checked + .accordion-header .accordion-icon {
+    transform: rotate(180deg);
+  }
+  .accordion-header {
+    
+    width:400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    background-color:#f1f1f1;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: left;
+  }
+  .accordion-header .accordion-title {
+    font-size: 14px;
+  }
+  .for1{
+    position:relative;
+    bottom:0.5px;
+    right:-1px;
+    height:35px;
+  }
+
 .footer{
     width:100%;
     height:200px;
