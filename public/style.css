@@ -1,6 +1,4 @@
-body{
-    background-color: aqua;
-}
+
 /* Navbar Styles */
 .navbar {
     width: 100%;
@@ -20,13 +18,22 @@ body{
 }
 .left-side i{
     font-size:25px;
+    margin-left:40px;
 }
-.left-side p a {
-    font-size: 20px;
+.left-side p a{
+    font-size: 15px;
     text-decoration: none;
     color: black;
     transition: color 0.3s;
     margin-left:10px;
+    opacity: 0.6;
+   
+}
+.left-side p{
+    margin-top:10px;
+}
+.treatments{
+    margin-left:35px;
 }
 
 .left-side p a:hover {
@@ -75,14 +82,56 @@ body{
 .login:hover{
     color: rgb(112, 111, 111);
 }
+.main-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:100px;
+}
+.main-section img{
+    width:100%;
+    height:100%;
+    background-size: cover;
+}
+.slider {
+    width: 100%;
+    max-width: 400px;
+    overflow: hidden;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+ 
+  }
+
+  .slides {
+    display: flex;
+    width: 100%; /* Adjust for number of images */
+    animation: slide 15s alternate infinite;
+  }
+
+  .slides img {
+    width: 100%;
+    height: 300px;
+  }
+
+  @keyframes slide {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(0); }
+    25% { transform: translateX(-100%); }
+    45% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    70% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    95% { transform: translateX(-300%); }
+    100% { transform: translateX(0); }
+  }
 .footer{
     width:100%;
     height:200px;
     background-color:#0367b0 ;
     color:white;
     font-size:15px;
-    position:fixed;
-    bottom:0;
+    margin-top:30px;
 }
 .footer p{
     padding-left:10px;
@@ -149,4 +198,11 @@ body{
     height:30%;
     padding:20px 20px 20px 0px;
 
+}
+.personal li a:hover{
+    opacity: 0.7;
+}
+.social-media i:hover{
+    opacity: 0.7;
+    cursor: pointer;
 }
