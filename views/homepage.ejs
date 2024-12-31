@@ -83,34 +83,33 @@ fill="currentColor"
 </div>
 </div> 
 <div class="why-us">
-    <h1 style="color:#0396ff">WHY US</h1>
-    <p>we specialize in providing holistic, patient-focused care for a wide range of health concerns. With over seven years of expertise, Dr. Sharma combines her qualifications in B.H.M.S and certifications in Skin Diseases (CSD) and Advanced Homeopathy (CCAH) to deliver effective treatments.
-
-        She offers personalized care for severe conditions such as eczema, psoriasis, alopecia, hormonal imbalances, PCOS, chronic migraines, and autoimmune disorders. Additionally, she addresses women’s health issues, including menstrual irregularities and menopause-related concerns. By simplifying complex medical conditions and focusing on the root cause, Dr. Sharma ensures that patients receive tailored solutions to achieve lasting health and well-being.</p>
-  </div>
-  <div class="faq-container">
-    <h1  class="faqs">Frequently Asked Questions</h1>
-    <div class="faq-item">
-      <div class="faq-question">
-        <span class="faq-icon">+</span>
-        Which is the best Homeopathy clinic near me to visit for hair fall treatment in Plot No 3, Road No 44, Pitampura?
-      </div>
-      <div class="faq-answer">You can visit Dr. Batra's clinic for hair fall treatment in Plot No 3, Road No 44, Pitampura.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-question">
-        <span class="faq-icon">+</span>
-        Which is the best Homeopathy clinic near me to visit for skin treatment in Plot No 3, Road No 44, Pitampura?
-      </div>
-      <div class="faq-answer">Dr. Batra's clinic specializes in skin treatments as well.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-question">
-        <span class="faq-icon">+</span>
-        What treatment does Dr. Batra’s® provide at Homeo clinic near me in New Delhi?
-      </div>
-      <div class="faq-answer">Dr. Batra's provides a range of homeopathy treatments, including skin, hair, and respiratory care.</div>
-    </div>
+<h1 style="color:#0396ff">WHY US</h1>
+<p>we specialize in providing holistic, patient-focused care for a wide range of health concerns. With over seven years of expertise, Dr. Sharma combines her qualifications in B.H.M.S and certifications in Skin Diseases (CSD) and Advanced Homeopathy (CCAH) to deliver effective treatments.
+She offers personalized care for severe conditions such as eczema, psoriasis, alopecia, hormonal imbalances, PCOS, chronic migraines, and autoimmune disorders. Additionally, she addresses women’s health issues, including menstrual irregularities and menopause-related concerns. By simplifying complex medical conditions and focusing on the root cause, Dr. Sharma ensures that patients receive tailored solutions to achieve lasting health and well-being.</p>
+</div>
+<div class="faq-container">
+<h1  class="faqs">Frequently Asked Questions</h1>
+<div class="faq-item">
+<div class="faq-question">
+<span class="faq-icon">+</span>
+Which is the best Homeopathy clinic near me to visit for hair fall treatment in Plot No 3, Road No 44, Pitampura?
+</div>
+<div class="faq-answer">You can visit Dr. Batra's clinic for hair fall treatment in Plot No 3, Road No 44, Pitampura.</div>
+</div>
+<div class="faq-item">
+<div class="faq-question">
+<span class="faq-icon">+</span>
+Which is the best Homeopathy clinic near me to visit for skin treatment in Plot No 3, Road No 44, Pitampura?
+</div>
+<div class="faq-answer">Dr. Batra's clinic specializes in skin treatments as well.</div>
+</div>
+<div class="faq-item">
+<div class="faq-question">
+<span class="faq-icon">+</span>
+What treatment does Dr. Batra’s® provide at Homeo clinic near me in New Delhi?
+</div>
+<div class="faq-answer">Dr. Batra's provides a range of homeopathy treatments, including skin, hair, and respiratory care.</div>
+</div>
     <div class="faq-item">
       <div class="faq-question">
         <span class="faq-icon">+</span>
@@ -118,45 +117,45 @@ fill="currentColor"
       </div>
       <div class="faq-answer">You should consult Dr. Batra's specialists for personalized hair loss treatment.</div>
     </div>
-  </div>
+</div>
 
-  <script>
-    const faqQuestions = document.querySelectorAll('.faq-question');
+<script>
+const faqQuestions = document.querySelectorAll('.faq-question');
 
-    faqQuestions.forEach(question => {
-      question.addEventListener('click', () => {
-        const answer = question.nextElementSibling;
-        const icon = question.querySelector('.faq-icon');
+faqQuestions.forEach(question => {
+question.addEventListener('click', () => {
+const answer = question.nextElementSibling;
+const icon = question.querySelector('.faq-icon');
         
-        if (answer.style.display === 'block') {
+if (answer.style.display === 'block') {
           answer.style.display = 'none';
           icon.textContent = '+';
-        } else {
+} else {
           answer.style.display = 'block';
           icon.textContent = '-';
-        }
-      });
-    });
-  </script> 
-  <div class="mapDisplay">
+}
+});
+});
+</script> 
+<div class="mapDisplay">
     <h1 style="color:#0396ff">MAP</h1>
     <a href="https://www.google.com/maps/place/Sahitya+saraswati+holistic+homeopathic+clinic/@28.7310042,77.0857621,17z/data=!3m1!4b1!4m6!3m5!1s0x390d0733bd673e01:0x3e29826b5e706efa!8m2!3d28.7309995!4d77.088337!16s%2Fg%2F11jrqjwlc2?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D"><div id="map"></div></a>
   </div> 
 </div>
 <a href="https://wa.me/918800254752" target="_blank" class="whatsapp-float">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
 </a>
 <script>
-  let mapToken = "<%= process.env.MAP_TOKEN %>";
-  console.log(mapToken);
-  mapboxgl.accessToken = mapToken;
-    const map = new mapboxgl.Map({
-        container: 'map', // container ID
-        center: [77.088418, 28.731059], // starting position [lng, lat]. Note that lat must be set between -90 and 90
-        zoom: 9 // starting zoom
-    });
-    const marker1 = new mapboxgl.Marker()
-        .setLngLat([77.088418, 28.731059])
-        .addTo(map);
+let mapToken = "<%= process.env.MAP_TOKEN %>";
+console.log(mapToken);
+mapboxgl.accessToken = mapToken;
+const map = new mapboxgl.Map({
+container: 'map', // container ID
+center: [77.088418, 28.731059], // starting position [lng, lat]. Note that lat must be set between -90 and 90
+zoom: 9 // starting zoom
+});
+const marker1 = new mapboxgl.Marker()
+.setLngLat([77.088418, 28.731059])
+.addTo(map);
 </script>
 </body>
