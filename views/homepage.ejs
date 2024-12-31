@@ -140,7 +140,7 @@ fill="currentColor"
   </script> 
   <div class="mapDisplay">
     <h1 style="color:#0396ff">MAP</h1>
-    <div id="map"></div>
+    <a href="https://www.google.com/maps/place/Sahitya+saraswati+holistic+homeopathic+clinic/@28.7310042,77.0857621,17z/data=!3m1!4b1!4m6!3m5!1s0x390d0733bd673e01:0x3e29826b5e706efa!8m2!3d28.7309995!4d77.088337!16s%2Fg%2F11jrqjwlc2?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D"><div id="map"></div></a>
   </div> 
 </div>
 <script>
@@ -149,8 +149,11 @@ fill="currentColor"
   mapboxgl.accessToken = mapToken;
     const map = new mapboxgl.Map({
         container: 'map', // container ID
-        center: [-74.5, 40], // starting position [lng, lat]. Note that lat must be set between -90 and 90
+        center: [77.088418, 28.731059], // starting position [lng, lat]. Note that lat must be set between -90 and 90
         zoom: 9 // starting zoom
     });
+    const marker1 = new mapboxgl.Marker()
+        .setLngLat([77.088418, 28.731059])
+        .addTo(map);
 </script>
 </body>
