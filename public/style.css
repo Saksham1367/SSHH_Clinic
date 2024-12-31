@@ -23,8 +23,9 @@
 }
 .left-side i{
     font-size:25px;
-    margin-left:40px;
+    margin-left:50px;
 }
+
 .left-side p a{
     font-size: 15px;
     text-decoration: none;
@@ -37,10 +38,14 @@
 .left-side p{
     margin-top:10px;
 }
-.treatments{
+
+.nav-components{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
     margin-left:35px;
 }
-
 .left-side p a:hover {
     color: #0396ff;
 }
@@ -104,7 +109,7 @@
     max-width: 400px;
     overflow: hidden;
     border: 2px solid #ddd;
-    border-radius: 10px;
+    border-radius: 2px;
  
   }
 
@@ -140,7 +145,7 @@
 .q-bar{
     height:400px;
     width:942px;
-    background-image: url("/SSHH_Clinic/views/photos/modern-soft-green-watercolor-texture-background-design_1055-17987.avif");
+    background-image: url("data:image/jpeg;base64,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");
     background-size: cover;
     
 }
