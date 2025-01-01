@@ -88,55 +88,106 @@ fill="currentColor"
 She offers personalized care for severe conditions such as eczema, psoriasis, alopecia, hormonal imbalances, PCOS, chronic migraines, and autoimmune disorders. Additionally, she addresses women’s health issues, including menstrual irregularities and menopause-related concerns. By simplifying complex medical conditions and focusing on the root cause, Dr. Sharma ensures that patients receive tailored solutions to achieve lasting health and well-being.</p>
 </div>
 <div class="faq-container">
-<h1  class="faqs">Frequently Asked Questions</h1>
-<div class="faq-item">
-<div class="faq-question">
-<span class="faq-icon">+</span>
-Which is the best Homeopathy clinic near me to visit for hair fall treatment in Plot No 3, Road No 44, Pitampura?
-</div>
-<div class="faq-answer">You can visit Dr. Batra's clinic for hair fall treatment in Plot No 3, Road No 44, Pitampura.</div>
-</div>
-<div class="faq-item">
-<div class="faq-question">
-<span class="faq-icon">+</span>
-Which is the best Homeopathy clinic near me to visit for skin treatment in Plot No 3, Road No 44, Pitampura?
-</div>
-<div class="faq-answer">Dr. Batra's clinic specializes in skin treatments as well.</div>
-</div>
-<div class="faq-item">
-<div class="faq-question">
-<span class="faq-icon">+</span>
-What treatment does Dr. Batra’s® provide at Homeo clinic near me in New Delhi?
-</div>
-<div class="faq-answer">Dr. Batra's provides a range of homeopathy treatments, including skin, hair, and respiratory care.</div>
-</div>
+ <h1 style="color:#0396ff;text-align: center; margin-bottom: 20px;">Frequently Asked Questions</h1>
+  <div class="faq-item">
+    <div class="faq-question">
+      <span class="faq-icon">+</span>
+      Which is the best Homeopathy clinic near me to visit for hair fall treatment in Plot No 3, Road No 44, Pitampura?
+    </div>
+    <div class="faq-answer">You can visit Dr. Batra's clinic for hair fall treatment in Plot No 3, Road No 44, Pitampura.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-question">
+      <span class="faq-icon">+</span>
+      Which is the best Homeopathy clinic near me to visit for skin treatment in Plot No 3, Road No 44, Pitampura?
+    </div>
+    <div class="faq-answer">Dr. Batra's clinic specializes in skin treatments as well.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-question">
+      <span class="faq-icon">+</span>
+      What treatment does Dr. Batra’s® provide at Homeo clinic near me in New Delhi?
+    </div>
+    <div class="faq-answer">Dr. Batra's provides a range of homeopathy treatments, including skin, hair, and respiratory care.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-question">
+      <span class="faq-icon">+</span>
+      Which homeopathy specialist should I consult for hair loss?
+    </div>
+    <div class="faq-answer">You should consult Dr. Batra's specialists for personalized hair loss treatment.</div>
+  </div>
+
+  <!-- Hidden FAQs -->
+  <div id="more-faqs" style="display: none;">
     <div class="faq-item">
       <div class="faq-question">
         <span class="faq-icon">+</span>
-        Which homeopathy specialist should I consult for hair loss?
+        Are homeopathy treatments safe?
       </div>
-      <div class="faq-answer">You should consult Dr. Batra's specialists for personalized hair loss treatment.</div>
+      <div class="faq-answer">Yes, homeopathy treatments are safe and free from side effects.</div>
     </div>
+    <div class="faq-item">
+      <div class="faq-question">
+        <span class="faq-icon">+</span>
+        How long does homeopathy treatment take to show results?
+      </div>
+      <div class="faq-answer">The time depends on the condition being treated and its severity.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">
+        <span class="faq-icon">+</span>
+        Can I use homeopathy alongside conventional medicine?
+      </div>
+      <div class="faq-answer">Yes, homeopathy can complement conventional medicine, but consult your doctor first.</div>
+    </div>
+  </div>
+
+  <!-- See More Button -->
+  <div class="see-more">
+    <a href="#" id="see-more-link">See More</a>
+    <a href="#" id="see-less-link" style="display: none;">See Less</a>
+  </div>
 </div>
 
 <script>
-const faqQuestions = document.querySelectorAll('.faq-question');
+  const faqQuestions = document.querySelectorAll('.faq-question');
+  const seeMoreLink = document.getElementById('see-more-link');
+  const seeLessLink = document.getElementById('see-less-link');
+  const moreFaqs = document.getElementById('more-faqs');
 
-faqQuestions.forEach(question => {
-question.addEventListener('click', () => {
-const answer = question.nextElementSibling;
-const icon = question.querySelector('.faq-icon');
-        
-if (answer.style.display === 'block') {
-          answer.style.display = 'none';
-          icon.textContent = '+';
-} else {
-          answer.style.display = 'block';
-          icon.textContent = '-';
-}
-});
-});
-</script> 
+  // Toggle individual FAQ answers
+  faqQuestions.forEach(question => {
+    question.addEventListener('click', () => {
+      const answer = question.nextElementSibling;
+      const icon = question.querySelector('.faq-icon');
+
+      if (answer.style.display === 'block') {
+        answer.style.display = 'none';
+        icon.textContent = '+';
+      } else {
+        answer.style.display = 'block';
+        icon.textContent = '-';
+      }
+    });
+  });
+  seeMoreLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    moreFaqs.style.display = 'block';
+    seeMoreLink.style.display = 'none';
+    seeLessLink.style.display = 'inline'; // Show "See Less" only after expanding
+  });
+
+  // Hide FAQs when clicking "See Less"
+  seeLessLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    moreFaqs.style.display = 'none';
+    seeMoreLink.style.display = 'inline';
+    seeLessLink.style.display = 'none'; // Remove "See Less" when FAQs are collapsed
+  });
+  
+</script>
+
 <div class="mapDisplay">
     <h1 style="color:#0396ff">MAP</h1>
     <h5>Sahitya Saraswati Holistic Homeopathic Clinic is centrally located in Rohini, Sector 24, New Delhi, making it easily accessible for all visitors.</h5>
