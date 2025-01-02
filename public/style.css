@@ -20,7 +20,40 @@
     margin-left:40px;
     border-radius:5px;
 }
-
+.first-photos{
+    display:flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap:20px;
+    
+}
+.card{
+    height:250px;
+    width:400px;
+    border: 1px solid #0342ff;
+    border-radius: 15px;
+}
+.card-title{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    gap:15px;
+}
+.card-title i{
+    font-size: 20px;
+}
+.card-title p{
+    margin-top:12px;
+}
+.card-text{
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap:15px;
+}
+.card-text i{
+    font-size:20px;
+}
 /* Left Side Links */
 .left-side {
     display: flex;
@@ -112,10 +145,10 @@
 }
 .slider {
     width: 100%;
-    max-width: 400px;
+    max-width: 600px;
     overflow: hidden;
     border: 2px solid #ddd;
-    border-radius: 2px;
+    border-radius: 4px;
  
   }
 
