@@ -143,7 +143,7 @@
    
 }
 .q-bar{
-    height:400px;
+    height:360px;
     width:1060px;
     background-image: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw8PDQ8NDw0NDQ0NDQ0NDQ0NDQ8NDQ0NFREWFhURFRUYHSggGBolGxUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OFxAQFSsdFR0rKy0tLS0rKy0tKysrLSstKystKy0tNy0tKystKy0tLS0tLS0rNystNzcrLS0yKzctLf/AABEIAMIBAwMBIgACEQEDEQH/xAAaAAADAQEBAQAAAAAAAAAAAAAAAQIDBAUH/8QAJxABAQEBAAEEAQMEAwAAAAAAAAERAgMSITFxgUFRYZGhsfATIlL/xAAYAQEBAQEBAAAAAAAAAAAAAAACAQADBP/EAB4RAQEBAQEBAAMBAQAAAAAAAAABEQISIQMxQVET/9oADAMBAAIRAxEAPwD7N5OtT3cIr70p081pH8EKXoCJSaUo0YDgq6ieqjGlg9K+hs1ngq6mro1mcV6RhaKThyHjaybCqqjpolpSmWKkXWlGFigmqRUyra2kWlaG1NPRCNvRRUMjD06Q1I00vRxZFL/Bj6N0UsOh5p0VibAKJDlClSiuokpQqqjTowpRtKQ+hhUktIsPDi6FKpqqnCG05DkEOtqxHSOo0KxdC/UyGZVtYgAjaVTadqKyXohpnGtaCCA4FrpDAAXp0gOENC9OkUZSmPp0dNKmK5SrUqkKGcoookM3SVzKkdOQoIxC+kwoPRUsVCpBYmjAqRdESFVVNZaRYeGuiWJqqlGpVNqumdqh11hWkeG1GUsGGrmBa6cj04SuqQWupAyC04Ch6JXO10h+ihpz5rnyA12zn/XTicWVSF1EkosdI5WFIrD5iuuchStOfmsqcgwzc8TYVhggsKQqqDqYso2fGeKkGL/QtTmISsq2pYUFOQNrSIJVSoUryysbdfDLG1z6hYMVIJEtaQYqRXpFC1255ZgwNKJGGXXWBTIrUXuo1zq+mm/QZ6BL09ikqpWR6+iFOjmacc7D4iuxz9p7qxb85QKQNxFKnSILDHXucFjaufEKBxdGRODFWBtbympXSxdGxn1CjTqJjaF5+p6hXlpgxtbxqJwvjxb8K5jTjrPYbXb8f4p/WHck/DJv5Z/VliD3PqcJWEiYTLptWNGxukWJ9K6kLEhekGEwnraEnrp5evSoBLg0SnpBcEyAVDBBGwwArYADZvIBhtXymlFWHjanln1yWNbEtqXgsFihjavlEaJxcQueWXkjPG/XKLw2j1x91lYJFYc5YZynGfXj93VzwO+JZiOn/LY4OucZ2Ovvwfn/ACw64q48/XFn8ZYF+kN5HHoSlaVTrr5ejVjS09HFGgBMUGRouAyNFwARURZyQMJq+QZBtXyZgamr5KpxeJXUvJKwoptWcoVyPSMbUnOKKw4cU8R6QrpKpmCwRULGXE2JsXgsXBsR/wAfP/mEvCXEyf459EqT16LHjlXKeolVKFjpFBOnKFjoo0nKNOQ8PBKBPyR80Yqcjas5OEBaJ4Z4jVSs0iolQZcSDNm8pioIGaQwAqgAVYhpoFJKIBFRUQcHRacgADQuJrhBQ4714YqDSMK6wSq1OAKcVKuVmcoV05rSLZc1crnXblcNJ6FdIZUaGXCPkFETFwJNmMaQZjhpCtigQVlApTKIAVGqlISnU2lAvxfSD0qcHogAQOI4Qda8sUCAU4dpwi0KcPT0iCmqXGnPTE9Cnzcbyq1hOlzoK7c9NNGp0SierBaEUzlSNVsWVKU1QaJSLWZoWplFVFaqVnp6URdqZRqSiVaaOKfUKDZsRTnSbSdJHNZJ0LiOcjpOleYAAKUPRSGhShU5Vc2fFT1MCkC0tK0V1XqOds9LRqzrHTzVepzc1rKFjtz21nSp0xlVKjpOmlpaE6i2rnS+axlbcq2jtnrWsevaqlXydrPjr3V1ff7VN+KnSdRaNODrWUaz9Q9RSJavnpra5p01462fRYvNR2n1L75ZdzHTkOpitDP1A8Fp5fFnxdn92Ni+ukWp9cbICBDUPQkDWGrtZ0+bAqyipq7E9ci1QWgkTV8d411zSNeL7DT57aepU7YWq5onO3ROmmTr+K5tVz0mOk/Iv4Xz0jrrfcSsXp0ax819/wAL9P6+5eXnZ9e6wuv0jlXV9vpn4/i/2Odfp+5BL8Lujnr/ACm/H17J5pwdb+T9/wCIznSrd5Yzo+VrSdNPF1ns57VTo8SV16x83zi+az8/X/b/AH9l5n10v6ZhG39g7Y54uiABXnIqAFYhSDnUIgBZpCICSekGGAcq5AGrE9K8YCL/AFQ5+QGKNIrgBHSN78Hx8wBI6sJ8/lH6z7AdIB356+4jn9QDiNOfisAD5Wn0cAOJG/gR5vm/kwvP7dL+mPPwAHZH/9k=");
     background-size: cover;
@@ -151,10 +151,10 @@
 }
 .img{
     margin-top:20px;
-    margin-left:30px;
-    height:120px;
-    width:100px;
-    border:1px solid black;
+    margin-left:40px;
+    height:145px;
+    width:145px;
+    
     border-radius:3px;
 }
 .information{
@@ -170,6 +170,7 @@
     background-color: rgb(245, 35, 35);
     margin-right:30px;
     margin-bottom:20px;
+    text-align: center;
 }
 .book a{
     text-decoration: none;
@@ -195,68 +196,88 @@
 }
 
 /* From Uiverse.io by SivarajRathinam */ 
-.accordion {
-    width: 800px;
-    margin: 0 auto;
-    display:flex;
-    margin-top : 20px;
-    
-  }
-  
-  .accordion-item {
-    margin-bottom: 5px;
-  }
-  
-  .accordion-item .content {
-    font-size: 12px;
-  }
-  
-  .accordion input[type="radio"] {
-    display: none;
-  }
-  
-  .accordion .content {
-    height: 0px;
-    padding: 0px;
-    background-color: #fafafa;
-    border-top:1px solid #d5d4d4;
-    overflow: hidden;
-    transition: all 0.3s ease;
-  }
-  .accordion input[type="radio"]:checked + .accordion-header + .content {
-    height: auto;
-    padding: 15px;
-    
-  }
-  .accordion-icon {
+.dropdown-section {
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tabs {
     display: flex;
-    align-items: center;
-    transition: all 0.5s ease;
-  }
-  .accordion input[type="radio"]:checked + .accordion-header .accordion-icon {
-    transform: rotate(180deg);
-  }
-  .accordion-header {
-    
-    width:400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px;
-    background-color:#f1f1f1;
+    background: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+}
+
+.tab-button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: #f8f8f8;
     cursor: pointer;
+    font-size: 16px;
     font-weight: bold;
-    text-align: left;
-  }
-  .accordion-header .accordion-title {
-    font-size: 14px;
-  }
-  .for1{
-    position:relative;
-    bottom:0.5px;
-    right:-1px;
-    height:35px;
-  }
+    text-align: center;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+.tab-button:hover {
+    background: #e0e0e0;
+}
+
+.content {
+    padding: 20px;
+    display: none;
+}
+
+.content-item {
+    display: none;
+}
+
+.content-item p {
+    margin: 0;
+    line-height: 1.6;
+}
+.tabs {
+    display: flex;
+    background: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+
+.tab-button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: #f8f8f8;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    outline: none;
+    transition: background-color 0.3s;
+    position: relative;
+}
+
+.tab-button:hover {
+    background: #e0e0e0;
+}
+
+/* Vertical Line Styling */
+.tabs .tab-button:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 10%;
+    right: 0;
+    height: 80%;
+    width: 1px;
+    background: #ccc;
+}
+
   .why-us{
     display:flex;
     flex-direction: column;
