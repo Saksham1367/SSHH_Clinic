@@ -10,7 +10,11 @@
  </div>
  <div class="right-side">
     <a  class="consult" href="/consult">CONSULT NOW</a>
+    <% if(!currentUser) {%>
     <a class="signUp" href="/signup">SIGN UP</a>
     <a class ="login" href="/login">LOG IN</a>
+      <% } else { %>
+    <a class ="login" href="/logout">LOG OUT</a>
+      <% } %>
  </div>
  </div>
