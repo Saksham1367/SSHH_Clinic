@@ -1,24 +1,22 @@
 <% layout("boilerplate") %>
 <body>
-    <div class="now">
-    <h1 >CONSULT NOW</h1>
-          <div class="consult-form shadow p-3 mb-5 bg-body-tertiary rounded">
-            <form action="/consult" method="POST" novalidate class="needs-validation" enctype="multipart/form-data">
-                <div>
-                  <div class="username">
+    <div class="consult-form">
+    <div class="subClass">
+            <form action="/consult" method="POST" novalidate class="needs-validation shadow p-3 mb-5 bg-body-tertiary rounded" enctype="multipart/form-data">
+                <h1 >CONSULT NOW</h1>
+                <div class="mb-3">
                     <label for="username" class="form-label">Username</label>
                     <input type="text", name="username" placeholder="Enter Username" id="username" class="form-control" required>
-                </div>
                     <div class="valid-feedback">Nicely Done!!</div>
                     <div class="invalid-feedback">Please Enter A Valid Username!!</div>
                 </div>   
-                <div >
+                <div class="mb-3">
                     <label for="number"  class="form-label">Phone Number</label>
                     <input type="number", name="number" placeholder="Enter your Phone Number" id="number" class="form-control" required>
                     <div class="valid-feedback">Nicely Done!!</div>
                     <div class="invalid-feedback">Please Enter A Valid Phone Number!!</div>
                 </div>
-                <div >
+                <div class="mb-3">
                     <div >
                         <label for="age" class="form-label">Age</label>
                         <input type="number", name="age" placeholder=" Enter your Age" id="age"  class="form-control" required>
@@ -30,7 +28,7 @@
                         <input type="email", name="email" placeholder="enter your Email" id="email"  class="form-control">
                     </div>
                 </div >
-                <div >
+                <div class="mb-3">
                     <div class="gender">
                         <div class="genHeading"><label class="form-label">Gender</label></div>
                         <div class="choice">
@@ -52,7 +50,7 @@
                         </div>
                     </div>
                     </div>
-                    <div >
+                    <div class="mb-3">
                         <label for="consult" class="form-label">Select Diseases You want To consult For: </label>
                         <select class="form-select" aria-label="Default select example" id="consult" name="disease">
                             <option selected>Choose Diseases</option>
@@ -73,7 +71,7 @@
                         <div class="invalid-feedback">Please Select A Disease!!</div>
                     </div>
                 </div>   
-                <div >
+                <div class="mb-3">
                     <label for="appointment-time" class="form-label">Appointment time</label>
                     <select id="appointment-time" class="form-select">
                         <!-- Morning Slots -->
@@ -102,7 +100,7 @@
               </div>
             <br><br>
         </form>
-    </div>
+    
 </div>
-
+</div>
 </body>
