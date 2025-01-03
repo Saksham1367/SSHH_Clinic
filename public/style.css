@@ -1,3 +1,7 @@
+*{
+    margin:0;
+    padding:0;
+}
 .roboto-regular {
     font-family: "Roboto", serif;
     font-weight: 400;
@@ -16,6 +20,10 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
+}
+.main_box{
+  z-index: 1000;
+  display:none;
 }
 .symbol{
     height:50px;
@@ -429,7 +437,7 @@
     display:flex;
     gap:10px;
     font-size:20px;
-    margin-left:20px;
+    margin-left:70px;
     margin-top:20px;
 }
 .upper {
@@ -441,7 +449,7 @@
     display:flex;
     align-items: center;
     justify-content: center;
-    margin-left:22px;
+   
 }
 .contact p{
     margin-top:10px;
@@ -451,9 +459,14 @@
     display:flex;
     align-items: center;
     justify-content: center;
+    gap:10px;
 }
 .contact2 i{
     margin-bottom:8px;
+
+}
+.contact2 a{
+    margin-bottom:3px;
 }
 .text{
     padding-top:15px;
@@ -593,6 +606,100 @@ font-weight: bold;
     .nav-components{
         display: none;
     }
+    .main_box{
+        display: block;
+    }
+    .btn_one{
+        font-size:30px;
+        position: absolute;
+        left:30px;
+        top:16px;
+        font-weight:bold;
+       
+    }
+    .sidebar_menu{
+        position: fixed;
+        left:-375px;
+        
+        height:100vh;
+        width:300px;
+        background-color: white;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+    }
+    .sidebar_menu .logo{
+           position: absolute;
+           width:100%;
+           line-height:60px;
+    }
+    .sidebar_menu .logo a{
+        position: absolute;
+        top:10px;
+        left:80px;
+        color:black;
+        font-size: 20px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    .sidebar_menu .menu{
+        position: absolute;
+        width: 100%;
+        top:80px;
+    }
+    .sidebar_menu .btn_two{
+        color:grey;
+        font-size:25px;
+        line-height: 60px;
+        position: absolute;
+        left:265px;
+        
+    }
+    .sidebar_menu .menu li{
+        margin-top:6px;
+        padding:10px 20px;
+    }
+    .sidebar_menu .menu a{
+        color:black;
+        opacity: 0.6;
+        text-decoration: none;
+        font-size: 20px;
+    }
+    .sidebar_menu .social_media{
+        
+        position: absolute;
+        left: 25%;
+        bottom:50px;
+    
+    }
+    .sidebar_menu .social_media i{
+        color:black;
+        opacity:0.5;
+       
+    }
+    #check{
+        display: none;
+    }
+    .sidebar_menu .menu li a:hover{
+        color:#0396ff;
+    }
+    .btn_one i:hover{
+         opacity:0.7;
+         cursor: pointer;
+    }
+    .btn_two i:hover{
+       opacity:0.7;
+       cursor: pointer;
+    }
+    .sidebar_menu .social_media i:hover{
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    #check:checked~ .sidebar_menu{
+        left:0;
+        top:0;
+    }
+    .right-side{
+        display: none;
+    }
 }
 @media (max-width: 768px) {
     .footer {
@@ -715,9 +822,7 @@ font-weight: bold;
     .slider{
         display:none;
     }
-    .right-side{
-        display: none;
-    }
+    
     .navbar{
         width:140%;
     }
