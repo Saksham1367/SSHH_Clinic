@@ -552,3 +552,29 @@ text-align: center;
 .back-btn{
     width:100px;
 }
+
+
+.subClass{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+    align-items: center;
+}
+.needs-validation{
+    width:500px;
+    
+}
+.sign-in{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:475px;
+}
+.sign-in button{
+    font-size: 15px;
+    color:white;
+}
+.redirect-link2{
+    font-size:15px;
+}
