@@ -524,3 +524,31 @@ text-align: center;
   .see-more a:hover {
     text-decoration: underline;
   }
+.now{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   gap:20px;
+}  
+.consult-form{
+    width:80%;
+}
+.form-label{
+    font-weight: bold;
+}
+.gender{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap:30px;
+}
+.btns{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top:20px;
+}
+.back-btn{
+    width:100px;
+}
