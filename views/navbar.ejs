@@ -1,5 +1,64 @@
+
 <div class="navbar shadow p-3 mb-5 bg-body-tertiary rounded sticky-top">
+      <div class="main_box">
+      <input type="checkbox" id="check" />
+      <div class="btn_one">
+        <label for="check">
+          <i class="fa-solid fa-bars"></i>
+        </label>
+      </div>
+
+      <div class="sidebar_menu">
+        <div class="logo">
+          <a href="#">Usefull Links</a>
+        </div>
+
+        <div class="btn_two">
+          <label for="check">
+            <i class="fa-solid fa-xmark"></i>
+          </label>
+        </div>
+
+        <div class="menu">
+          <ul style="list-style-type: none;">
+            <li>
+             
+              <a href="#">Treatments</a>
+            </li>
+            <li>
+              
+              <a href="#">Treatments Results And Reviews</a>
+            </li>
+            <li>
+              
+              <a href="#">Why Us</a>
+            </li>
+            <li>
+              
+              <a href="#">Blogs</a>
+            </li>
+            <li>
+              
+              <a href="/consult">Consult Now</a>
+            </li>
+            <% if(!currentUser) {%>
+            <li>
+              <a href="/signup">Sign Up</a>
+            </li>
+            <li>
+              <a href="/login">Login</a>
+            </li>
+            <% } else { %>
+              <li>
+                <a href="/logout">Logut</a>
+              </li>
+              <% } %>
+          </ul>
+        </div>
+
         
+      </div>
+    </div>
     <div class="left-side">
        <div><a href="/"><img src="/photos/WhatsApp Image 2025-01-02 at 19.36.23_4a68c2d3.jpg" class="symbol"></a></div>
         <div class="nav-components"><p><a class="treatments" href="#">TREAMENTS</a></p>
@@ -18,3 +77,4 @@
       <% } %>
  </div>
  </div>
+ 
