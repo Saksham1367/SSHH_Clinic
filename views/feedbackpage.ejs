@@ -10,7 +10,7 @@
     <div class="outer-consult">
         <% for(let feedbacks of feedbackInfo){ %>
                 <div class="inner-consult">
-                    <img src="<%= feedbacks.image.path %>" alt="wait for image" class="mb-3">
+                    <img src="<%= feedbacks.image.path %>" alt="wait for image" class="mb-3" style="height:140px">
                     <h4 class="mb-3">Patient Name:<%= feedbacks.username %></h4>
                
                     <p ><b>Problem Description:</b> <%= feedbacks.description %></p>
