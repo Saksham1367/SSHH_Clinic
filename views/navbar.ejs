@@ -21,22 +21,16 @@
 
         <div class="menu">
           <ul style="list-style-type: none;">
-            <li>
-             
-              <a href="#">Treatments</a>
-            </li>
+            
             <li>
               
               <a href="#">Treatments Results And Reviews</a>
             </li>
-            <li>
-              
-              <a href="#">WHY US?</a>
-            </li>
+           
             <% if(currentUser&& currentUser.username === "saksham dhingra" || "mayankdhingra_08"){ %>
             <li>
               
-              <a href="/consult/notifications">Notifocations</a>
+              <a href="/consult/notifications">Notifications</a>
             </li>
             <% } %>
             <li>
@@ -63,9 +57,9 @@
   </div>
     <div class="left-side">
        <div><a href="/"><img src="/photos/WhatsApp Image 2025-01-02 at 19.36.23_4a68c2d3.jpg" class="symbol"></a></div>
-        <div class="nav-components"><p><a class="treatments" href="#">TREAMENTS</a></p>
+        <div class="nav-components">
         <p><a href="/feedback">TREATMENT RESULTS AND REVIEWS</a></p>
-        <p><a href="#">WHY US?</a></p>
+       
         <% if(currentUser&& currentUser.username === "saksham dhingra" || "mayankdhingra_08"){ %>
         <p><a href="/consult/notifications">NOTIFICATIONS</a></p>
         <% } %>
