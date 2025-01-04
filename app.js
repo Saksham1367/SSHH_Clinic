@@ -7,11 +7,14 @@ const app = express();
 const mongoose = require("mongoose");
 const path = require("path");
 const ejsMate = require("ejs-mate");
+const method = require("method-override");
 const WarpAsync =require("./ultis/warpasync");
 const ExpressError =require("./ultis/expresserror.js");
 const consultRouter = require("./routes/consult.js");
 const userRouter = require("./routes/user.js");
+const feedbackRouter = require("./routes/feedback.js");
 const session = require("express-session");
+const MongoStore = require("connect-mongo");
 const flash = require("connect-flash");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
@@ -24,15 +27,17 @@ app.use(express.static(path.join(__dirname,"public")));
 app.engine("ejs", ejsMate);
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
+app.use(method("_method"));
 
 app.listen(3000,()=>{
     console.log("server is listening to port no: 3000");
 });
 
 // setting up mongoose
+// const dbUrl = "mongodb://127.0.0.1:27017/clinic";
+const dbUrl = process.env.DB_URL;
 async function main() {
-    await mongoose.connect("mongodb://127.0.0.1:27017/clinic");
+    await mongoose.connect(dbUrl);
 }
 
 main()
@@ -42,8 +47,21 @@ main()
     console.log(err);
 })
 
+// setting up mongo store
+const mstore = MongoStore.create({
+    mongoUrl: dbUrl,
+    crypto:{
+        secret:process.env.SESSION_SECRET
+    },
+    touchAfter: 24*60*60
+})
+mstore.on("error",(e)=>{
+    console.log("Session Store Error",e);
+});
+
 // setting up session
 const sessionInfo={
+    store:mstore,
     secret:"mysupersecret",
     resave:false,  
     saveUninitialized:true,
@@ -53,6 +71,7 @@ const sessionInfo={
         maxAge:1000*60*60*24*7
     }
 }
+
 app.use(session(sessionInfo));
 
 // setting up flash
@@ -78,6 +97,9 @@ app.use("/",userRouter);
 
 //consult page
 app.use("/consult",consultRouter);
+
+// feedback page
+app.use("/feedback",feedbackRouter);
 
 // home page 
 app.get("/",WarpAsync((req,res,next)=>{

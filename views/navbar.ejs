@@ -19,42 +19,44 @@
         </label>
       </div>
 
-      <div class="menu">
-        <ul style="list-style-type: none;">
-          <li>
-           
-            <a href="#">Treatments</a>
-          </li>
-          <li>
-            
-            <a href="#">Treatments Results And Reviews</a>
-          </li>
-          <li>
-            
-            <a href="#">Why Us</a>
-          </li>
-          <li>
-            
-            <a href="#">Notifications</a>
-          </li>
-          <li>
-            
-            <a href="/consult">Consult Now</a>
-          </li>
-          <% if(!currentUser) {%>
-          <li>
-            <a href="/signup">Sign Up</a>
-          </li>
-          <li>
-            <a href="/login">Login</a>
-          </li>
-          <% } else { %>
+        <div class="menu">
+          <ul style="list-style-type: none;">
             <li>
-              <a href="/logout">Logut</a>
+             
+              <a href="#">Treatments</a>
+            </li>
+            <li>
+              
+              <a href="#">Treatments Results And Reviews</a>
+            </li>
+            <li>
+              
+              <a href="#">WHY US?</a>
+            </li>
+            <% if(currentUser&& currentUser.username === "saksham dhingra"){ %>
+            <li>
+              
+              <a href="/consult/notifications">Notifocations</a>
             </li>
             <% } %>
-        </ul>
-      </div>
+            <li>
+              
+              <a href="/consult">Consult Now</a>
+            </li>
+            <% if(!currentUser) {%>
+            <li>
+              <a href="/signup">Sign Up</a>
+            </li>
+            <li>
+              <a href="/login">Login</a>
+            </li>
+            <% } else { %>
+              <li>
+                <a href="/logout">Logut</a>
+              </li>
+              <% } %>
+          </ul>
+        </div>
 
       
     </div>
@@ -62,9 +64,11 @@
     <div class="left-side">
        <div><a href="/"><img src="/photos/WhatsApp Image 2025-01-02 at 19.36.23_4a68c2d3.jpg" class="symbol"></a></div>
         <div class="nav-components"><p><a class="treatments" href="#">TREAMENTS</a></p>
-        <p><a href="#">TREATMENT RESULTS AND REVIEWS</a></p>
+        <p><a href="/feedback">TREATMENT RESULTS AND REVIEWS</a></p>
         <p><a href="#">WHY US?</a></p>
-        <p><a href="#">Notifications</a></p>
+        <% if(currentUser&& currentUser.username === "saksham dhingra"){ %>
+        <p><a href="/consult/notifications">NOTIFICATIONS</a></p>
+        <% } %>
     </div>
  </div>
  <div class="right-side">

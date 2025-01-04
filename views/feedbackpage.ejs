@@ -1,0 +1,26 @@
+<% layout("boilerplate") -%>
+<body>
+    <h1>hii i am feedback</h1>
+    <div class="outer-consult">
+        <% for(let feedbacks of feedbackInfo){ %>
+                <div class="inner-consult">
+                    <h3>Patient Name:<%= feedbacks.username %></h3>
+                    <p>Problem Description :<%= feedbacks.description %></p>
+                    <p>Feedback:<%=feedbacks.feedback  %></p>
+                    <img src="<%= feedbacks.image.path %>" alt="wait for image" height="300px" width="300px">
+                    <p>Rating:<%= feedbacks.rating %></p>
+                    <p class="starability-result" data-rating="<%= feedbacks.rating %>"></p>
+                    <% if(currentUser&& currentUser.username === "saksham dhingra"){ %>
+                    <form method="post" action="/feedback/<%= feedbacks.id %>?_method=DELETE">
+                        <button>Delete feedback</button>
+                    </form>
+                    <% } %>
+                </div>
+                <br>
+        <% } %>
+        <a href="/">Back</a>
+        <% if(currentUser&& currentUser.username === "saksham dhingra"){ %>
+            <a href="/feedback/new">Create Feedback</a>
+        <% } %>
+    </div>
+</body>
