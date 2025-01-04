@@ -1,5 +1,5 @@
 <% layout("boilerplate") -%>
-<body class="roboto-regular">
+
 <div class="main-section">
 <div class="first-photos">
   <div class="address">
@@ -272,75 +272,9 @@ She offers personalized care for severe conditions such as eczema, psoriasis, al
   </div>
 </div>
 
-<script>
-  const faqQuestions = document.querySelectorAll('.faq-question');
-  const seeMoreLink = document.getElementById('see-more-link');
-  const seeLessLink = document.getElementById('see-less-link');
-  const moreFaqs = document.getElementById('more-faqs');
 
-  // Toggle individual FAQ answers
-  faqQuestions.forEach(question => {
-    question.addEventListener('click', () => {
-      const answer = question.nextElementSibling;
-      const icon = question.querySelector('.faq-icon');
-
-      if (answer.style.display === 'block') {
-        answer.style.display = 'none';
-        icon.textContent = '+';
-      } else {
-        answer.style.display = 'block';
-        icon.textContent = '-';
-      }
-    });
-  });
-  seeMoreLink.addEventListener('click', (e) => {
-    e.preventDefault();
-    moreFaqs.style.display = 'block';
-    seeMoreLink.style.display = 'none';
-    seeLessLink.style.display = 'inline'; // Show "See Less" only after expanding
-  });
-
-  // Hide FAQs when clicking "See Less"
-  seeLessLink.addEventListener('click', (e) => {
-    e.preventDefault();
-    moreFaqs.style.display = 'none';
-    seeMoreLink.style.display = 'inline';
-    seeLessLink.style.display = 'none'; // Remove "See Less" when FAQs are collapsed
-  });
-
-  function showContent(tabId) {
-            const contentItems = document.querySelectorAll('.content-item');
-            contentItems.forEach((item) => {
-                item.style.display = 'none';
-            });
-
-            const activeContent = document.getElementById(tabId);
-            if (activeContent) {
-                activeContent.style.display = 'block';
-            }
-        }
-        function showContent(tabId) {
-    const content = document.querySelector('.content');
-    const contentItems = document.querySelectorAll('.content-item');
-
-    // Show the content container
-    content.style.display = 'block';
-
-    // Hide all content items
-    contentItems.forEach((item) => {
-        item.style.display = 'none';
-    });
-
-    // Show the selected content item
-    const activeContent = document.getElementById(tabId);
-    if (activeContent) {
-        activeContent.style.display = 'block';
-    }
-}
-  
-</script>
 <div class="review-slider">
-  <h2>Google Reviews and Ratings</h2>
+  <h1>Google Reviews and Ratings</h1>
   <p class="rating-summary">
     <span class="stars">★★★★☆</span> <!-- 4 Full Stars -->
   
@@ -486,12 +420,77 @@ She offers personalized care for severe conditions such as eczema, psoriasis, al
       </li>
     </ul>
     <a href="https://www.google.com/maps/place/Sahitya+saraswati+holistic+homeopathic+clinic/@28.7310042,77.0857621,17z/data=!3m1!4b1!4m6!3m5!1s0x390d0733bd673e01:0x3e29826b5e706efa!8m2!3d28.7309995!4d77.088337!16s%2Fg%2F11jrqjwlc2?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D"><div id="map"></div></a>
+  <span class="optional">(Optional):  Click on the map to get the exact location</span>
   </div> 
   
 <a href="https://wa.me/918800254752" target="_blank" class="whatsapp-float">
 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
 </a>
 <script>
+  const faqQuestions = document.querySelectorAll('.faq-question');
+  const seeMoreLink = document.getElementById('see-more-link');
+  const seeLessLink = document.getElementById('see-less-link');
+  const moreFaqs = document.getElementById('more-faqs');
+
+  // Toggle individual FAQ answers
+  faqQuestions.forEach(question => {
+    question.addEventListener('click', () => {
+      const answer = question.nextElementSibling;
+      const icon = question.querySelector('.faq-icon');
+
+      if (answer.style.display === 'block') {
+        answer.style.display = 'none';
+        icon.textContent = '+';
+      } else {
+        answer.style.display = 'block';
+        icon.textContent = '-';
+      }
+    });
+  });
+  seeMoreLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    moreFaqs.style.display = 'block';
+    seeMoreLink.style.display = 'none';
+    seeLessLink.style.display = 'inline'; // Show "See Less" only after expanding
+  });
+
+  // Hide FAQs when clicking "See Less"
+  seeLessLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    moreFaqs.style.display = 'none';
+    seeMoreLink.style.display = 'inline';
+    seeLessLink.style.display = 'none'; // Remove "See Less" when FAQs are collapsed
+  });
+
+  function showContent(tabId) {
+            const contentItems = document.querySelectorAll('.content-item');
+            contentItems.forEach((item) => {
+                item.style.display = 'none';
+            });
+
+            const activeContent = document.getElementById(tabId);
+            if (activeContent) {
+                activeContent.style.display = 'block';
+            }
+        }
+        function showContent(tabId) {
+    const content = document.querySelector('.content');
+    const contentItems = document.querySelectorAll('.content-item');
+
+    // Show the content container
+    content.style.display = 'block';
+
+    // Hide all content items
+    contentItems.forEach((item) => {
+        item.style.display = 'none';
+    });
+
+    // Show the selected content item
+    const activeContent = document.getElementById(tabId);
+    if (activeContent) {
+        activeContent.style.display = 'block';
+    }
+}
 let mapToken = "<%= process.env.MAP_TOKEN %>";
 
 mapboxgl.accessToken = mapToken;
@@ -543,4 +542,3 @@ const reviewCards = document.querySelector('.review-cards');
 window.addEventListener('resize', updateSlider); // Adjust slider on resize
 updateSlider(); // Initial load
 </script>
-</body>
