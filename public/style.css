@@ -424,7 +424,9 @@ html, body {
     text-decoration: none;
     color:white;
 }
-
+.social{
+    margin-right:20px;
+}
 .social i{
     padding-right:3px;
     display:flex;
