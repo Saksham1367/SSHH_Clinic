@@ -27,6 +27,10 @@ const consultSchema = new mongoose.Schema({
         type : String,
         required : true    
     },
+    time:{
+        type : String,
+        required : true
+    },
 });
 
 const Consult = mongoose.model("Consult", consultSchema);

@@ -13,7 +13,7 @@ router.get("/login", (req, res) => {
 router.post("/login",originalUrl,
     passport.authenticate('local', { failureRedirect: "/login",failureFlash:true }), 
     WarpAsync(async(req, res) => {
-    req.flash("success","Welcome Back");
+    req.flash("success","Welcome Back, We Missed You");
     let pathName= res.locals.path || "/";
     res.redirect(pathName);
 }));
@@ -24,7 +24,7 @@ router.get("/logout",(req,res,next)=>{
         if(err){
             return next(err);
         }
-        req.flash("success","Goodbye");
+        req.flash("success","Goodbye,We will Be Right Here To Help You");
         res.redirect("/");
     });
 });
