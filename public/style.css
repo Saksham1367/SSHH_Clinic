@@ -732,6 +732,47 @@ margin-bottom:15px;
 .FooterList{
     display:flex;
 }
+/*feedback*/
+.inner-consult{
+    background-color: #e6eef7;
+    width:300px;
+    border: 1px solid #1586ff;
+    border-radius:0.5rem;
+    padding:1rem;
+    margin-left:1.5rem;
+    margin-top:1.5rem;
+    margin-bottom:1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height:max-content;
+}
+.outer-consult{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adds space between cards */
+  align-items: center;
+  justify-content: center;
+}
+.inner-consult img{
+    width:100%;
+    border-radius:0.5rem;
+}
+.inner-consult h4{
+    font-weight:600;
+    color: #333;
+}
+.inner-consult p{
+    font-size:1rem;
+    color: #333;
+    opacity:0.8;
+}
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+    gap:30px;
+    margin-right:30px;
+}
 @media screen and (max-width:1200px) {
     .nav-components{
         display: none;
@@ -923,6 +964,13 @@ margin-bottom:15px;
         font-size: 24px;
     }
 }
+@media screen and(max-width:920px) 
+{
+    .inner-consult{
+        width:400px;
+    }
+}
+
 @media screen and (max-width:990px){
     .first-photos{
         flex-direction: column;
@@ -943,6 +991,10 @@ margin-bottom:15px;
     .review-card {
         min-width: 100%; /* Each card takes full width */
       }
+    .button{
+        justify-content: center;
+        margin-bottom:10px;
+    }  
 }
 @media screen and (max-width:776px) {
     .address{
