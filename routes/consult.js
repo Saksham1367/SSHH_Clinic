@@ -12,6 +12,7 @@ router.get("/",isLoggedIn ,(req, res) => {
 }); 
 
 router.post("/", WarpAsync(async(req, res,next) => {
+    try{
     let data= req.body;
     let {error} = consultSchema.validate(data);
     if(error){
@@ -21,12 +22,20 @@ router.post("/", WarpAsync(async(req, res,next) => {
     await newConsult.save();
     req.flash("success","Appointment Booked Successfully !!");
     res.redirect("/");
+    }catch (err) {
+        console.error("Consult creation error:", err.message); // Debugging log
+        req.flash("error", "Failed to book appointment. Please try again.");
+        next(err);
+    }
 }));
 
 // notifications 
 router.get("/notifications",isLoggedIn,
-    WarpAsync(async(req,res)=>{
+    WarpAsync(async(req,res,next)=>{
     const consultInfo =await Consult.find({});
+    if (!consultInfo.length) {
+        req.flash("error", "No notifications at the moment.");
+    }
     res.render("notifications.ejs",{consultInfo});
 }));
 
