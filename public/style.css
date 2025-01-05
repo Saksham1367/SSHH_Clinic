@@ -815,6 +815,10 @@ margin-bottom:15px;
     font-size: 16px;
     margin: 0 0 20px;
 }
+.popup-content a{
+    text-decoration: none;
+    color:black;
+}
 
 .popup-content button {
     background: #007BFF;
