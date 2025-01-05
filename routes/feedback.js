@@ -24,19 +24,23 @@ router.get("/new",WarpAsync((req,res)=>{
 }))
 
 // feedback form post route
-router.post("/",upload.single("image"),WarpAsync(async(req,res)=>{
-    let data = req.body;
+router.post("/",upload.single("image"),WarpAsync(async(req,res,next)=>{
+    try{
     let {path,filename} =req.file;
+    let data = req.body;
     let {error} = feedbackSchema.validate(data);
     if(error){
         throw new ExpressError(400,error.message);
     }
-
     const feedback = new Feedback({...data});
     feedback.image = {path,filename};
     await feedback.save();
     req.flash("success","Feedback Submitted Successfully");
     res.redirect("/feedback");
+    }catch (err) {
+        console.error("Feedback creation error:", err.message); // Debugging log
+        next(err);
+    }
 }));
 
 // feedback delete route

@@ -15,6 +15,7 @@ router.post("/login",originalUrl,
     WarpAsync(async(req, res) => {
     req.flash("success","Welcome Back, We Missed You");
     let pathName= res.locals.path || "/";
+    console.log("redirecting to :",pathName);
     res.redirect(pathName);
 }));
 
@@ -33,13 +34,14 @@ router.get("/signup", (req, res) => {
     res.render("signup.ejs");
 });
 
-router.post("/signup", WarpAsync(async(req, res) => {
+router.post("/signup", WarpAsync(async(req, res,next) => {
     try{
         let {username,number,email,password}=req.body;
         const newUser =new User({username,email,number});
         const registeredUser = await User.register(newUser,password);
         req.login(registeredUser,(err)=>{
             if(err){
+                req.flash("error", "Login failed after registration. Please try logging in manually.");
                 return next(err);
             }
             req.flash("success","Welcome to Clinic");

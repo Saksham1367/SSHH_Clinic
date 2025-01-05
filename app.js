@@ -34,10 +34,16 @@ app.listen(3000,()=>{
 });
 
 // setting up mongoose
-const dbUrl = "mongodb://127.0.0.1:27017/clinic";
-// const dbUrl = process.env.DB_URL;
+// const dbUrl = "mongodb://127.0.0.1:27017/clinic";
+const dbUrl = process.env.DB_URL;
 async function main() {
-    await mongoose.connect(dbUrl);
+    mongoose.connect(dbUrl, {
+        serverSelectionTimeoutMS: 5000, // 5 seconds
+    }).then(() => {
+        console.log("Connected to MongoDB");
+    }).catch((err) => {
+        console.error("Database connection error:", err);
+    });
 }
 
 main()
@@ -113,6 +119,7 @@ app.all("*",(req,res,next)=>{
 
 // error handling middleware
 app.use((err,req,res,next)=>{
+    console.error("Unhandled error:", err); // Log the error for debugging
     let {status=500,message="something went wrong !!"} =err;
     res.render("error.ejs",{message});
 })
