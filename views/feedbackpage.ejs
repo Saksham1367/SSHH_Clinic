@@ -17,15 +17,9 @@
                     <p ><b>Feedback:</b> <%=feedbacks.feedback  %></p>
                     <p ><b>Rating:</b> <%= feedbacks.rating %></p>
                     <p class="starability-result" data-rating="<%= feedbacks.rating %>"></p>
-<<<<<<< HEAD
                     <% if(currentUser&& currentUser.username === "saksham dhingra"){ %>
                     <form method="post" action="/feedback/<%= feedbacks.id %>?_method=DELETE">
                         <button>Delete feedback</button>
-=======
-                    <% if(currentUser&& currentUser.username === "saksham dhingra" || "mayankdhingra_08"){ %>
-                    <form  method="post" action="/feedback/<%= feedbacks.id %>?_method=DELETE">
-                        <button class="btn btn-primary">Delete feedback</button>
->>>>>>> db3011da6cde4360bcd20f65e09bc8aea4fbf486
                     </form>
                     <% } %>
             </div>
@@ -33,14 +27,10 @@
                 <br>
                
         <% } %>
-<<<<<<< HEAD
         <a href="/">Back</a>
         <% if(currentUser&& currentUser.username === "saksham dhingra" ){ %>
             <a href="/feedback/new">Create Feedback</a>
         <% } %>
-=======
-         
->>>>>>> db3011da6cde4360bcd20f65e09bc8aea4fbf486
     </div>
     
 </body>
