@@ -1085,7 +1085,7 @@ margin-bottom:15px;
         text-align: center;
     }
     .btns{
-        justify-content: center;
+        justify-content: space-evenly;
     }
     .needs-validation{
         width:70%;
