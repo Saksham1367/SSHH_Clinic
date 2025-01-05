@@ -1,26 +1,46 @@
 <% layout("boilerplate") -%>
 <body>
-    <h1>hii i am feedback</h1>
+    <div class="button">
+        <a class="btn btn-dark" style=" padding-left:15px; padding-right: 15px; font-size: 15px;"  href="/">Back</a>
+        <% if(currentUser&& currentUser.username === "saksham dhingra" || "mayankdhingra_08"){ %>
+            <a style=" padding-left:15px; padding-right: 15px; font-size: 15px;" class="btn btn-dark" href="/feedback/new">Create Feedback</a>
+        <% } %>
+    </div> 
+    <h1 style="text-align: center;">FeedBacks by our pateints </h1>
     <div class="outer-consult">
         <% for(let feedbacks of feedbackInfo){ %>
                 <div class="inner-consult">
-                    <h3>Patient Name:<%= feedbacks.username %></h3>
-                    <p>Problem Description :<%= feedbacks.description %></p>
-                    <p>Feedback:<%=feedbacks.feedback  %></p>
-                    <img src="<%= feedbacks.image.path %>" alt="wait for image" height="300px" width="300px">
-                    <p>Rating:<%= feedbacks.rating %></p>
+                    <img src="<%= feedbacks.image.path %>" alt="wait for image" class="mb-3" style="height:140px">
+                    <h4 class="mb-3">Patient Name:<%= feedbacks.username %></h4>
+               
+                    <p ><b>Problem Description:</b> <%= feedbacks.description %></p>
+                    <p ><b>Feedback:</b> <%=feedbacks.feedback  %></p>
+                    <p ><b>Rating:</b> <%= feedbacks.rating %></p>
                     <p class="starability-result" data-rating="<%= feedbacks.rating %>"></p>
+<<<<<<< HEAD
                     <% if(currentUser&& currentUser.username === "saksham dhingra"){ %>
                     <form method="post" action="/feedback/<%= feedbacks.id %>?_method=DELETE">
                         <button>Delete feedback</button>
+=======
+                    <% if(currentUser&& currentUser.username === "saksham dhingra" || "mayankdhingra_08"){ %>
+                    <form  method="post" action="/feedback/<%= feedbacks.id %>?_method=DELETE">
+                        <button class="btn btn-primary">Delete feedback</button>
+>>>>>>> db3011da6cde4360bcd20f65e09bc8aea4fbf486
                     </form>
                     <% } %>
-                </div>
+            </div>
+            
                 <br>
+               
         <% } %>
+<<<<<<< HEAD
         <a href="/">Back</a>
         <% if(currentUser&& currentUser.username === "saksham dhingra" ){ %>
             <a href="/feedback/new">Create Feedback</a>
         <% } %>
+=======
+         
+>>>>>>> db3011da6cde4360bcd20f65e09bc8aea4fbf486
     </div>
+    
 </body>
