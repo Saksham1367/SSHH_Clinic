@@ -15,7 +15,6 @@
                
                     <p ><b>Problem Description:</b> <%= feedbacks.description %></p>
                     <p ><b>Feedback:</b> <%=feedbacks.feedback  %></p>
-                    <p ><b>Rating:</b> <%= feedbacks.rating %></p>
                     <p class="starability-result" data-rating="<%= feedbacks.rating %>"></p>
                     <% if(currentUser&& currentUser.username === "saksham dhingra"){ %>
                     <form method="post" action="/feedback/<%= feedbacks.id %>?_method=DELETE">
