@@ -34,8 +34,8 @@ app.listen(3000,()=>{
 });
 
 // setting up mongoose
-const dbUrl = "mongodb://127.0.0.1:27017/clinic";
-// const dbUrl = process.env.DB_URL;
+// const dbUrl = "mongodb://127.0.0.1:27017/clinic";
+const dbUrl = process.env.DB_URL;
 async function main() {
     await mongoose.connect(dbUrl);
 }

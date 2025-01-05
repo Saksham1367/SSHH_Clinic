@@ -1,6 +1,15 @@
 <% layout("boilerplate") -%>
 
 <div class="main-section">
+  <div class="popup-overlay hidden" id="popup">
+    <div class="popup-content">
+        <h2>Welcome to Sahitya Saraswati Holistic Homopatheic Clinic!</h2>
+        <p>Thank you for visiting. We are here to help you with holistic homeopathic care.</p>
+        <p><a href="/signup">Click here to sign in</a></p>
+        <p>Already A user <a href="/login">Login</a></p>
+        <button id="close-btn">Close</button>
+    </div>
+</div>
 <div class="first-photos">
   <div class="address">
   <div class="card">
@@ -36,7 +45,7 @@
 </div>
 </div>
 <div class="our-doctor">
-<h1 style="color:#0396ff">OUR DOCTOR</h1>
+<h1 id="page-content" style="color:#0396ff">OUR DOCTOR</h1>
 <div class="q-bar">
 <div class="above">
 <div class="img">
@@ -541,4 +550,31 @@ const reviewCards = document.querySelector('.review-cards');
 }
 window.addEventListener('resize', updateSlider); // Adjust slider on resize
 updateSlider(); // Initial load
+const popup = document.getElementById("popup");
+        const closeBtn = document.getElementById("close-btn");
+        const body = document.body;
+        const pageContent = document.getElementById("page-content");
+        const mainContent=document.querySelector(".main-section")
+
+        // Check if popup has been shown before using localStorage
+        const hasVisited = localStorage.getItem("hasVisited");
+
+        if (!hasVisited) {
+            // Show popup only on first visit
+            popup.classList.remove("hidden");
+            body.classList.add("no-scroll");
+            pageContent.classList.add("blur");
+            mainContent.classList.add("no-scroll");
+        }
+
+        // Close the popup and store the "hasVisited" flag in localStorage
+        closeBtn.addEventListener("click", () => {
+            popup.classList.add("hidden");
+            body.classList.remove("no-scroll");
+            pageContent.classList.remove("blur");
+            mainContent.classList.remove("no-scroll")
+
+            // Set flag in localStorage
+            localStorage.setItem("hasVisited", "true");
+        });
 </script>

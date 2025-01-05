@@ -2,11 +2,11 @@
 <body>
     <div class="button">
         <a class="btn btn-dark" style=" padding-left:15px; padding-right: 15px; font-size: 15px;"  href="/">Back</a>
-        <% if(currentUser&& currentUser.username === "saksham dhingra" || "mayankdhingra_08"){ %>
+        <% if(currentUser&& currentUser.username === "saksham dhingra"){ %>
             <a style=" padding-left:15px; padding-right: 15px; font-size: 15px;" class="btn btn-dark" href="/feedback/new">Create Feedback</a>
         <% } %>
     </div> 
-    <h1 style="text-align: center;">FeedBacks by our pateints </h1>
+    <h1 style="text-align: center;">FEEDBACKS  BY OUR PATIENTS</h1>
     <div class="outer-consult">
         <% for(let feedbacks of feedbackInfo){ %>
                 <div class="inner-consult">
@@ -18,7 +18,7 @@
                     <p class="starability-result" data-rating="<%= feedbacks.rating %>"></p>
                     <% if(currentUser&& currentUser.username === "saksham dhingra"){ %>
                     <form method="post" action="/feedback/<%= feedbacks.id %>?_method=DELETE">
-                        <button>Delete feedback</button>
+                        <button class="btn btn-dark">Delete feedback</button>
                     </form>
                     <% } %>
             </div>
@@ -26,10 +26,7 @@
                 <br>
                
         <% } %>
-        <a href="/">Back</a>
-        <% if(currentUser&& currentUser.username === "saksham dhingra" ){ %>
-            <a href="/feedback/new">Create Feedback</a>
-        <% } %>
+        
     </div>
     
 </body>
