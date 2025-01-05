@@ -25,8 +25,14 @@
             align-items: center;
             justify-content: space-between;
         }
-        .btns a{
-            margin-top:3px;
+      
+        @media screen and (max-width:600px){
+            .btns{
+                justify-content: center;
+                gap:10px;
+
+            }
+        
         }
     </style>
 </head>
@@ -56,7 +62,7 @@
                     <div class="valid-feedback">Nicely Done!!</div>
                     <div class="invalid-feedback">Please Enter A Valid feedback!!</div>
                 </div>
-                <div class="mb-3 col-md-4 col-sm-12">
+                <div class="mb-3">
                         <label for="rating" class="form-label">Rating</label>
                         <input type="number", name="rating" placeholder="Enter Rating" id="rating"  class="form-control" required>
                         <div class="valid-feedback">Nicely Done!!</div>
@@ -64,7 +70,7 @@
                 </div> 
                 <div class="btns">
                 <button class="btn btn-dark btn-lg add-btn mt-3">Add Feedback</button>
-                <a class="btn btn-dark btn-lg" href="/feedback">BACK</a>
+                <a class="btn mt-3 btn-dark btn-lg" href="/feedback">BACK</a>
             </div>
             </form>
             <br><br>
