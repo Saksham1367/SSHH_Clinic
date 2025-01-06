@@ -596,7 +596,7 @@ margin-bottom:15px;
     justify-content: center;
     align-items: center;
     height:auto;
-    max-height:700px;
+    max-height:900px;
     
 }
 .needs-validation{
@@ -815,10 +815,6 @@ margin-bottom:15px;
     font-size: 16px;
     margin: 0 0 20px;
 }
-.popup-content a{
-    text-decoration: none;
-    color:black;
-}
 
 .popup-content button {
     background: #007BFF;
@@ -1008,6 +1004,10 @@ margin-bottom:15px;
         margin-left:10px;
         margin-right:10px;
     }
+    .c-button{
+        display: flex;
+        justify-content: center;
+    }
 
 }
 @media (max-width: 480px) {
@@ -1094,7 +1094,7 @@ margin-bottom:15px;
         text-align: center;
     }
     .btns{
-        justify-content: space-evenly;
+        justify-content: center;
     }
     .needs-validation{
         width:70%;
