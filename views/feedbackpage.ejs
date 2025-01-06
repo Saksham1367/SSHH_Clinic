@@ -1,0 +1,32 @@
+<% layout("boilerplate") -%>
+<body>
+    <div class="button">
+        <a class="btn btn-dark" style=" padding-left:15px; padding-right: 15px; font-size: 15px;"  href="/">Back</a>
+        <% if(currentUser&& currentUser.username === "saksham dhingra"){ %>
+            <a style=" padding-left:15px; padding-right: 15px; font-size: 15px;" class="btn btn-dark" href="/feedback/new">Create Feedback</a>
+        <% } %>
+    </div> 
+    <h1 style="text-align: center;">FEEDBACKS  BY OUR PATIENTS</h1>
+    <div class="outer-consult">
+        <% for(let feedbacks of feedbackInfo){ %>
+                <div class="inner-consult">
+                    <img src="<%= feedbacks.image.path %>" alt="wait for image" class="mb-3" style="height:140px">
+                    <h4 class="mb-3">Patient Name:<%= feedbacks.username %></h4>
+               
+                    <p ><b>Problem Description:</b> <%= feedbacks.description %></p>
+                    <p ><b>Feedback:</b> <%=feedbacks.feedback  %></p>
+                    <p class="starability-result" data-rating="<%= feedbacks.rating %>"></p>
+                    <% if(currentUser&& currentUser.username === "saksham dhingra"){ %>
+                    <form method="post" action="/feedback/<%= feedbacks.id %>?_method=DELETE">
+                        <button class="btn btn-dark">Delete feedback</button>
+                    </form>
+                    <% } %>
+            </div>
+            
+                <br>
+               
+        <% } %>
+        
+    </div>
+    
+</body>

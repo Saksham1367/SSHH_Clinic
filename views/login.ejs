@@ -1,0 +1,26 @@
+<% layout("boilerplate") %>
+
+<div>
+    <div class="subClass" >
+        
+        <form action="/login" method="post" novalidate class="needs-validation shadow p-3 mb-5 bg-body-tertiary rounded">
+            <h1 class="mb-4">LOGIN</h1>
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text", name="username" placeholder="enter Username" id="username" class="form-control" required>
+                <div class="valid-feedback">Nicely Done!!</div>
+                <div class="invalid-feedback">Please Enter A Valid Username!!</div>
+            </div> 
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password", name="password" placeholder="enter password " id="password" class="form-control" required>
+                <div class="valid-feedback">Nicely Done!!</div>
+                <div class="invalid-feedback">Please Enter A Valid Password!!</div>
+            </div> 
+            <div class="sign-in btn btn-primary">
+            <button class="btn signup-btn">login</button>
+        </div>
+        </form>
+        <p class="redirect-link2">Create Account!!<a href="/signup">signup</a></p>
+    </div>
+</div>    

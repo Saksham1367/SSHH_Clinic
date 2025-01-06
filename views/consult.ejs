@@ -1,0 +1,106 @@
+<% layout("boilerplate") %>
+<body>
+    <div class="consult-form">
+    <div class="subClass">
+            <form action="/consult" method="POST" novalidate class="needs-validation shadow p-3 mb-5 bg-body-tertiary rounded" >
+                <h1 >CONSULT NOW</h1>
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text", name="username" placeholder="Enter Username" id="username" class="form-control" required>
+                    <div class="valid-feedback">Nicely Done!!</div>
+                    <div class="invalid-feedback">Please Enter A Valid Username!!</div>
+                </div>   
+                <div class="mb-3">
+                    <label for="number"  class="form-label">Phone Number</label>
+                    <input type="number", name="number" placeholder="Enter your Phone Number" id="number" class="form-control" required>
+                    <div class="valid-feedback">Nicely Done!!</div>
+                    <div class="invalid-feedback">Please Enter A Valid Phone Number!!</div>
+                </div>
+                <div class="mb-3">
+                    <div >
+                        <label for="age" class="form-label">Age</label>
+                        <input type="number", name="age" placeholder=" Enter your Age" id="age"  class="form-control" required>
+                        <div class="valid-feedback">Nicely Done!!</div>
+                        <div class="invalid-feedback">Please Enter A Valid Age!!</div>
+                    </div>
+                    <div >
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email", name="email" placeholder="enter your Email" id="email"  class="form-control">
+                    </div>
+                </div >
+                <div class="mb-3">
+                    <div class="gender">
+                        <div class="genHeading"><label class="form-label">Gender</label></div>
+                        <div class="choice">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+                            <label class="form-check-label" for="male">Male</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                            <label class="form-check-label" for="female">Female</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="others" value="others">
+                            <label class="form-check-label" for="others">Others</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="nan" value="nan">
+                            <label class="form-check-label" for="nan">NAN</label>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="consult" class="form-label">Select Diseases You want To consult For: </label>
+                        <select class="form-select" aria-label="Default select example" id="consult" name="disease">
+                            <option selected>Choose Diseases</option>
+                            <option value="General Health Issues">General Health Issues</option>
+                            <option value="Respiratory Problems">Respiratory Problems</option>
+                            <option value="Digestive Disorders">Digestive Disorders</option>
+                            <option value="Skin Conditions">Skin Conditions</option>
+                            <option value="Joint and Muscular Problems">Joint and Muscular Problems</option>
+                            <option value="Mental Health">Mental Health</option>
+                            <option value="Women Health">Women Health</option>
+                            <option value="Children Health">Children Health</option>
+                            <option value="Chronic Conditions">Chronic Conditions</option>
+                            <option value="ENT Problems">ENT Problems</option>
+                            <option value="Urinary Issues">Urinary Issues</option>
+                            <option value="Other Conditions">Chronic Conditions</option>
+                          </select>
+                        <div class="valid-feedback">Nicely Done!!</div>
+                        <div class="invalid-feedback">Please Select A Disease!!</div>
+                    </div>
+                </div>   
+                <div class="mb-3">
+                    <label for="appointment-time" class="form-label">Appointment time</label>
+                    <select id="appointment-time" class="form-select" name="time" required>
+                        <!-- Morning Slots -->
+                        <optgroup label="Morning">
+                            <option value="11:00-11:30">11:00 - 11:30</option>
+                            <option value="11:30-12:00">11:30 - 12:00</option>
+                            <option value="12:00-12:30">12:00 - 12:30</option>
+                            <option value="12:30-13:00">12:30 - 1:00</option>
+                            <option value="13:00-13:30">1:00 - 1:30</option>
+                            <option value="13:30-14:00">1:30 - 2:00</option>
+                        </optgroup>
+                        <!-- Evening Slots -->
+                        <optgroup label="Evening">
+                            <option value="17:30-18:00">5:30 - 6:00</option>
+                            <option value="18:00-18:30">6:00 - 6:30</option>
+                            <option value="18:30-19:00">6:30 - 7:00</option>
+                            <option value="19:00-19:30">7:00 - 7:30</option>
+                            <option value="19:30-20:00">7:30 - 8:00</option>
+                        </optgroup>
+                    </select>
+                    
+                </div>
+                <div class="btns">
+                <button class="btn btn-dark btn-lg  mt-3 ">Consult Now</button>
+               <a href="/" class="btn btn-dark btn-lg offset-5 mt-4 back-btn">Back</a>
+              </div>
+            <br><br>
+        </form>
+    
+</div>
+</div>
+</body>
