@@ -5,6 +5,7 @@ const User = require("../models/users.js");
 const passport = require("passport");
 const { originalUrl } = require("../ultis/isLoggedIn.js");
 
+
 // login page 
 router.get("/login", (req, res) => {
     res.render("login.ejs");
@@ -52,6 +53,5 @@ router.post("/signup", WarpAsync(async(req, res,next) => {
         res.redirect("/signup");
     }
 }));
-
 
 module.exports = router;
